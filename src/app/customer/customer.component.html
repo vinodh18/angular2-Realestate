@@ -1,0 +1,97 @@
+<h3>
+	<span class="glyphicon glyphicon-user"></span>
+	Customers
+
+</h3>
+
+<div class="row">
+            <div class="col-md-10">
+                <div class="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="toolbar-item">
+                            <a class="active">
+                                <span class="glyphicon glyphicon-th-large"></span> Card View
+                            </a>
+                        </li>
+                        <li class="toolbar-item">
+                            <a class="">
+                                <span class="glyphicon glyphicon-align-justify"></span> List View
+                            </a>
+                        </li>
+                        <li class="toolbar-item">
+                            <a>
+                                <span class="glyphicon glyphicon-map-marker"></span> Map View
+                            </a>
+                        </li>
+                        <li class="toolbar-item">
+                            <a routerlink="/customers/0/edit" ng-reflect-router-link="/customers/0/edit" href="createCustomer">
+                                <span class="glyphicon glyphicon-plus"></span> New Customer
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="pull-right">
+                     Filter:
+                     <input _ngcontent-c2="" name="filter" type="text" ng-reflect-name="filter" class="ng-untouched ng-pristine ng-valid" [(ngModel)]="userFilter.name">
+                 </div>
+                    <!-- <cm-filter-textbox class="navbar-right" _nghost-c2=""><form _ngcontent-c2="" novalidate="" class="ng-untouched ng-pristine ng-valid">
+        Filter:
+        <input _ngcontent-c2="" name="filter" type="text" ng-reflect-name="filter" class="ng-untouched ng-pristine ng-valid">
+</form></cm-filter-textbox> -->
+                </div>
+            </div>
+        </div>
+
+
+
+<div class="container">
+   
+    <div class="row card-container">
+       <div *ngFor="let user of users | filterBy: userFilter">
+        <div class="col-sm-6 col-md-4 col-lg-3" >
+            <div class="card" style="width:100%">
+                <div _ngcontent-c3 class="card-header">
+
+                    
+                  <!--   <a [routerLink]="['/customers',customer.id,'details']" class="white">
+                        {{customer.firstName | capitalize }} {{ customer.lastName | capitalize }} 
+                    </a> -->
+                    <a class="white">
+                        {{user.name}}
+                    </a>
+                    <a>
+                         <i title="Edit"  
+                           class="pull-right glyphicon glyphicon-edit edit-icon white"></i>
+                    </a>
+
+                   <!--  <a [routerLink]="['/customers',customer.id,'edit']">
+                        <i title="Edit"  
+                           class="pull-right glyphicon glyphicon-edit edit-icon white"></i>
+                    </a> -->
+                </div>
+                <div class="card-body">
+                    <div class="clearfix">
+                        <div class="pull-left card-body-left">
+                            <a href="#" class="white">
+                                <img src="src/images/male.png" class="card-image" />
+                            </a>
+                        </div>
+                       
+                        <div _ngcontent-c3="" class="pull-left card-body-right">
+                            <div _ngcontent-c3="" class="card-body-content">
+                                <i class="glyphicon glyphicon-phone"> </i> {{user.phone}}
+
+                            </div>
+                            <div _ngcontent-c3="" class="card-body-content">
+                           <!--  <i class="glyphicon glyphicon-envelope"> </i>  -->
+                                <span>{{user.email}}</span>
+                            </div>
+
+                            <a _ngcontent-c3="" ng-reflect-router-link="/customers,1,orders" href="/customers/1/orders">View Orders</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

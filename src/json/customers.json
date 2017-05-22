@@ -1,0 +1,31 @@
+cutomers:[
+		{
+		"name":"AS",
+		"username": "james",
+		"lastName": "H",
+		},
+		{
+		"name":"Ajay",
+		"username": "Kumar",
+		"lastName": "Sha",
+		},
+		{
+		"name":"Nami",
+		"username": "Kanth",
+		"lastName": "Ker",
+		},
+		{
+		"name":"Ajay",
+		"username": "Sharma",
+		"lastName": "Ravi",
+		},
+		{
+		"name":"Ravi",
+		"username": "Kanth",
+		"lastName": "H",
+		},
+		{
+		"name":"Arjun",
+		"username": "Kumar",
+		"lastName": "A",
+		}]

@@ -1,0 +1,123 @@
+
+  <form method="post" (submit)="onTestPost()" enctype="multipart/form-data">
+	    <h1>Please Insert User Details :</h1>
+	    
+    <div class="contentform">
+    	<div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+
+
+    	<div class="leftcontact">
+    		
+			      <div class="form-group">
+			        <p>Firstname<span>*</span></p>
+			        <span class="icon-case"><i class="glyphicon glyphicon-user"></i></span>
+				        <input type="text" name="name" id="name" [(ngModel)]="customer.name" required/>
+				    <div class="validation"></div>
+				   
+       </div> 
+
+
+
+            <div class="form-group">
+            <p>LastName <span>*</span></p>
+            <span class="icon-case"><i class="glyphicon glyphicon-user"></i></span>
+				<input type="text" name="prenom" id="prenom" data-rule="required" [(ngModel)]="customer.lastname"/>
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>E-mail <span>*</span></p>	
+			<span class="icon-case"><i class="glyphicon glyphicon-envelope"></i></span>
+                <input type="email" name="email" id="email" data-rule="email" [(ngModel)]="customer.email"/>
+                <div class="validation"></div>
+			</div>	
+
+			<div class="form-group">
+			<p>Phone<span>*</span></p>
+			<span class="icon-case"><i class="glyphicon glyphicon-phone"></i></span>
+				<input type="number" name="society" id="society" data-rule="required" [(ngModel)]="customer.phone" maxlength = "10"/>
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>Gender <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-location-arrow"></i></span>
+				<!-- <input type="text" name="adresse" id="adresse" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Adresse' doit être renseigné."/> -->
+				<select id="adresse" class="form-control" style="width:74%; height:41px;border: 1px solid #eee;" [(ngModel)]="customer.gender">
+					<option value="">Select Gender</option>
+					<option value="MALE">Male</option>
+					<option value="FEMALE">Fe-Male</option>
+				</select>
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>User Type <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-map-marker"></i></span>
+				<select id="adresse" class="form-control" style="width:74%; height:41px;border: 1px solid #eee;">
+					<option value="">Select User Type</option>
+					<option value="INVESTOR">Investor</option>
+					<option value="AGENT">Agent</option>
+				</select>
+                <div class="validation"></div>
+			</div>	
+
+
+
+	</div>
+
+	<div class="rightcontact">	
+
+			<div class="form-group">
+			<p>Plot No <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-building-o"></i></span>
+				<input type="text" name="ville" id="ville" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>Street <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-building-o"></i></span>
+				<input type="text" name="ville" id="ville" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>City <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-building-o"></i></span>
+				<input type="text" name="ville" id="ville" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
+                <div class="validation"></div>
+			</div>	
+
+			<div class="form-group">
+			<p>Country<span>*</span></p>	
+			<span class="icon-case"><i class="fa fa-phone"></i></span>
+				<input type="text" name="phone" id="phone" data-rule="maxlen:10" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres"/>
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>ZipCode <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-info"></i></span>
+                <input type="numbers" name="fonction" id="fonction" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Fonction' doit être renseigné."/>
+                <div class="validation"></div>
+			</div>
+
+			<!-- <div class="form-group">
+			<p>Subject <span>*</span></p>	
+			<span class="icon-case"><i class="fa fa-comment-o"></i></span>
+                <input type="text" name="sujet" id="sujet" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Sujet' doit être renseigné."/>
+                <div class="validation"></div>
+			</div>
+		
+			<div class="form-group">
+			<p>Message <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-comments-o"></i></span>
+                <textarea name="message" rows="14" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Message' doit être renseigné."></textarea>
+                <div class="validation"></div>
+			</div>	 -->
+	</div>
+	</div>
+<button type="submit" class="bouton-contact">Send</button>
+	
+</form>	
