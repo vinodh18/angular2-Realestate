@@ -11,16 +11,18 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   providers: [HttpTestService]
 })
 export class CreateCustomerComponent implements OnInit {
-  customer: Object = {};
+ public customer;
+ //public customers;
+
   postData: string;
   name: string;
   constructor(private httpService: HttpTestService) { }
-
+  
   onTestPost() { 
-      
- 	  this.httpService.submitForm().subscribe(
-      data => this.postData = JSON.stringify(data),
-      error => alert(error),
+ // console.log('this.customer', this.customer) // get form data 
+ 	  this.httpService.submitForm(this.customer).subscribe(
+      data => this.postData = JSON.stringify(this.customer),
+      //error => alert(error),
       () => console.log("Finished")
     );
   } 

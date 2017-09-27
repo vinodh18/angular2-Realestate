@@ -25,9 +25,8 @@ export class CustomerComponent implements OnInit {
 	
 	onTestGet() {
 		
-
 		this.httpService.fetchData().subscribe(
-    		data => this.users = data.response.customers
+    		data => this.users = data.customers
     	);
 	}
 	

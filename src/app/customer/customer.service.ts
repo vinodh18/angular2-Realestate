@@ -25,9 +25,8 @@ export class HttpTestService {
        .map(res =>  res.json());     	    
     }
     
-    submitForm() {
-      var json = {name: name, gender: 'MALE'}; //req.body
-      
+    submitForm(message: Message) {
+      var json = message //{name:"" , gender: 'MALE'}; //req.body
       var param = 'json=' + json;
       var headers = new Headers();
       
